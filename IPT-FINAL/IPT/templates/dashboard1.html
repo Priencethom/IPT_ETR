@@ -200,6 +200,98 @@
                 {% endif %}
             </div>
 
+            <!-- Stress vs Age -->
+            <div class="chart-card">
+                <div class="chart-title">
+                    <span>6</span>
+                    <div>
+                        <h3>Stress Level by Age</h3>
+                        <p>Average stress score for each age group.</p>
+                    </div>
+                </div>
+
+                <img src="{{ url_for('static', filename=stress_age) }}"
+                    class="real-chart">
+
+                <div class="chart-note">
+                    Reveals how stress levels vary across ages.
+                </div>
+            </div>
+
+            <!-- bar chart 2 -->
+            <div class="chart-card">
+                <div class="chart-title">
+                    <span>7</span>
+                    <div>
+                        <h3>Social Media Hours vs Physical Activity</h3>
+                        <p>Relationship between online activity and exercise.</p>
+                    </div>
+                </div>
+
+                <img src="{{ url_for('static', filename=bar_chart2) }}"
+                    class="real-chart">
+
+                <div class="chart-note">
+                    Trend line shows overall relationship.
+                </div>
+            </div>
+
+            <!-- 2D Histogram -->
+            <div class="chart-card">
+                <div class="chart-title">
+                    <span>8</span>
+                    <div>
+                        <h3>Screen Time Before Sleep vs Sleep Hours</h3>
+                        <p>Density map of sleeping habits.</p>
+                    </div>
+                </div>
+
+                <img src="{{ url_for('static', filename=histogram_plot2) }}"
+                    class="real-chart">
+
+                <div class="chart-note">
+                    Darker areas represent more students.
+                </div>
+            </div>
+
+            
+            <!-- Depression vs Physical Activity -->
+            <div class="chart-card">
+                <div class="chart-title">
+                    <span>9</span>
+                    <div>
+                        <h3>Physical Activity by Depression Level</h3>
+                        <p>Average activity among depressed and non-depressed teens.</p>
+                    </div>
+                </div>
+
+                <img src="{{ url_for('static', filename=grouped_bar_chart2) }}"
+                    class="real-chart">
+
+                <div class="chart-note">
+                    Highlights activity differences by mental health category.
+                </div>
+            </div>
+
+            <!-- Pie Chart 2 -->
+            <div class="chart-card">
+                <div class="chart-title">
+                    <span>10</span>
+                    <div>
+                        <h3>Social Media Hours by Interaction Level</h3>
+                        <p>Share of social media hours grouped by social interaction level.</p>
+                    </div>
+                </div>
+
+                <img src="{{ url_for('static', filename=pie_chart2) }}"
+                    class="real-chart">
+
+                <div class="chart-note">
+                    Compares usage among Low, Medium, and High interaction groups.
+                </div>
+            </div>
+
+
             <div class="chart-card summary-card">
                 <div class="summary-title">
                     <i class="bi bi-bar-chart-line"></i>
@@ -238,6 +330,45 @@
                     </div>
                     <span>{{ corr_label }} between usage and academic scores.</span>
                 </div>
+            </div>
+            <!-- kkkk -->
+            <!-- Summary Statistics Table -->
+            <div class="chart-card summary-stats-card" style="grid-column: 1 / -1;">
+                <div class="summary-title">
+                    <i class="bi bi-table"></i>
+                    <h3>Summary Statistics</h3>
+                </div>
+
+                {% if summary_stats %}
+                <div style="overflow-x: auto;">
+                    <table class="stats-table">
+                        <thead>
+                            <tr>
+                                <th>Metric</th>
+                                <th>Average</th>
+                                <th>Median</th>
+                                <th>Std Dev</th>
+                                <th>Min</th>
+                                <th>Max</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for col, stats in summary_stats.items() %}
+                            <tr>
+                                <td class="metric-name">{{ col | replace('_', ' ') | title }}</td>
+                                <td>{{ stats.average }}</td>
+                                <td>{{ stats.median }}</td>
+                                <td>{{ stats.std_dev }}</td>
+                                <td>{{ stats.min }}</td>
+                                <td>{{ stats.max }}</td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+                {% else %}
+                <p style="color: #6b7280; text-align: center; padding: 20px;">No data available for the selected filters.</p>
+                {% endif %}
             </div>
         </section>
 

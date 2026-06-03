@@ -1,0 +1,155 @@
+/* .main-content {
+    margin-left: 270px;
+    padding: 30px;
+}
+
+.welcome-message {
+    font-size: 24px;
+    font-weight: 700;
+    color: #111827;
+} */
+
+
+
+/* Main Content */
+.learnings-main {
+    margin-left: 270px;
+    min-height: 100vh;
+    padding: 14px 24px;
+    background: #ffffff;
+}
+
+
+/* Header */
+.learnings-header {
+    position: relative;
+    margin-bottom: 24px;
+}
+
+.learnings-header h1 {
+    font-size: 27px;
+    margin-bottom: 6px;
+    color: #111827;
+}
+
+.learnings-header p {
+    color: #6b7280;
+    font-size: 15px;
+}
+
+
+.admin-profile {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    color: #374151;
+    font-weight: 600;
+}
+
+.avatar {
+    width: 34px;
+    height: 34px;
+    background: #2BB3A3;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+
+.member-card {
+    position: relative;
+    border-radius: 25px;
+    border: 1px solid #6b7280;
+    background: #fff;
+    padding: 26px 30px;
+    margin-bottom: 40px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+    overflow: hidden; /* Fix bottom bar rounding */
+}
+
+/* Add bottom gradient bar */
+.member-card::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 10px;
+    border-radius: 0 0 25px 25px;
+    background: linear-gradient(to right, #2BB3A3, #4A90E2);
+
+    /* Make sure the bottom bar is inside the card */
+    z-index: 1;
+}
+
+.member-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 22px;
+}
+
+.member-profile {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.member-avatar {
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+}
+
+.member-info h3 {
+    font-size: 17px;
+    font-weight: 600;
+    color: #111827;
+}
+
+.member-role {
+    background: #eef6ff;
+    color: #4A90E2;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 7px 12px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(74, 144, 226, 0.15);
+}
+
+.lesson-content h4 {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #111827;
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 14px;
+}
+
+.lesson-content h4 i {
+    color: #2BB3A3;
+    font-size: 15px;
+}
+
+.lesson-content p {
+    font-size: 15px;
+    color: #111827;
+    line-height: 1.35;
+    text-align: justify;
+    margin-bottom: 18px;
+}
+
+.lesson-content p:last-child {
+    margin-bottom: 0;
+}

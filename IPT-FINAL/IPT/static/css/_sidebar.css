@@ -1,0 +1,131 @@
+/* Sidebar Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 270px;
+    height: 100vh;
+    background: linear-gradient(180deg, #ffffff 0%, #dff8f5 35%, #2BB3A3 100%);
+    border-right: 1px solid #d9eeee;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 28px 24px;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+/* Brand */
+.brand-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding-bottom: 26px;
+    border-bottom: 1px solid rgba(43, 179, 163, 0.25);
+}
+
+.logo-icon {
+    width: 54px;
+    height: 54px;
+    object-fit: contain;
+}
+
+.brand-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.brand-title {
+    font-size: 26px;
+    font-weight: 800;
+    color: #2BB3A3;
+    line-height: 1.1;
+}
+
+.brand-title span {
+    color: #4A90E2;
+}
+
+.brand-text p {
+    font-size: 14px;
+    color: #111827;
+    margin-top: 6px;
+    line-height: 1.4;
+}
+
+/* Navigation */
+.nav-menu {
+    margin-top: 34px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    color: #000000;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 14px 18px;
+    border-radius: 9px;
+    transition: 0.2s ease;
+}
+
+.nav-item:hover {
+    background: rgba(255, 255, 255, 0.55);
+}
+
+.nav-item.active {
+    background: #ffffff;
+    color: #000000;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.nav-item i {
+    font-size: 22px;
+    width: 24px;
+    text-align: center;
+}
+
+/* Quote */
+.quote-card {
+    font-size: 17px;
+    margin-top: auto;
+    margin-bottom: 28px;
+    background: rgba(255, 255, 255, 0.45);
+    border-radius: 12px;
+    padding: 26px 18px;
+    text-align: center;
+}
+
+.quote-card p {
+    font-size: 17px;
+    color: #111827;
+    line-height: 1.35;
+}
+
+/* Logout */
+.logout-btn {
+    border-top: 1px solid rgba(255, 255, 255, 0.45);
+    padding-top: 26px;
+    border-radius: 0;
+}
+
+.logout-btn:hover {
+    color: #ffffff;
+}
+
+
+
+
+
+

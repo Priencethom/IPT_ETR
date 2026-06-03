@@ -1,0 +1,200 @@
+/* =========================
+   Main Content
+========================= */
+.account-main {
+    margin-left: 270px;
+    min-height: 100vh;
+    padding: 24px;
+    background: #ffffff;
+}
+
+
+
+
+/* =========================
+   Edit Profile Card
+========================= */
+.edit-profile-card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 32px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.edit-profile-card h2 {
+    font-size: 1.4rem;
+    color: #111;
+    margin-bottom: 30px;
+    font-weight: 700;
+    font-family: Georgia, serif;
+}
+
+/* =========================
+   Form Layout
+========================= */
+.edit-profile-form {
+    display: flex;
+    gap: 50px;
+    align-items: flex-start;
+}
+
+/* =========================
+   Photo Section
+========================= */
+.photo-upload-section {
+    width: 250px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section-label {
+    font-weight: 700;
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+    color: #111;
+}
+
+.photo-preview-circle {
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    background: #ebf6f4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.photo-preview-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.camera-icon {
+    font-size: 2.5rem;
+    color: #00a689;
+}
+
+.choose-photo-btn {
+    background: transparent;
+    color: #00a689;
+    border: 1px solid #00a689;
+    padding: 10px 24px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: 0.2s ease;
+}
+
+.choose-photo-btn:hover {
+    background: #ebf6f4;
+}
+
+.file-requirements {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 0.75rem;
+    color: #777;
+}
+
+/* =========================
+   Input Section
+========================= */
+.form-inputs-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #111;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px 15px;
+    font-size: 0.95rem;
+    border: 1px solid #dce3ea;
+    border-radius: 8px;
+    box-sizing: border-box;
+    transition: border-color 0.2s;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #00a689;
+}
+
+.form-group input[readonly] {
+    background: #f8f9fa;
+    color: #666;
+    cursor: not-allowed;
+}
+
+/* =========================
+   Save Button
+========================= */
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+}
+
+.save-btn {
+    background: #00a689;
+    color: white;
+    border: none;
+    padding: 12px 40px;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.save-btn:hover {
+    background: #008f75;
+}
+
+/* =========================
+   Responsive
+========================= */
+@media (max-width: 768px) {
+    .edit-profile-form {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .photo-upload-section {
+        width: 100%;
+    }
+
+    .form-inputs-section {
+        width: 100%;
+    }
+
+    .form-actions {
+        justify-content: center;
+    }
+
+    .save-btn {
+        width: 100%;
+    }
+}

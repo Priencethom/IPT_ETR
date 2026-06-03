@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MindTrack Sidebar</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/_sidebar.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/learnings.css') }}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+</head>
+
+<body>
+
+    {% include "_sidebar.html" %}
+
+    <main class="learnings-main">
+
+        
+
+        <!-- Header -->
+        <section class="learnings-header">
+            <h1>Learnings & Realizations</h1>
+            <p>Members’ reflections and insights about what they learned in class.</p>
+
+            <div class="admin-profile">
+                <div class="avatar">A</div>
+                <span>Admin</span>
+            </div>
+        </section>
+
+
+        <!-- Member Card -->
+
+        <!-- Binala, Demie Rose  -->
+        <div class="member-card">
+
+            <div class="member-header">
+                <div class="member-profile">
+                    <img src="{{ url_for('static', filename='Images/M1_BINALA.png') }}" alt="Binala, Demie Rose" class="member-avatar">
+
+                    <div class="member-info">
+                        <h3>Binala, Demie Rose</h3>
+                    </div>
+                </div>
+
+                <span class="member-role">Leader</span>
+            </div>
+
+            <div class="lesson-content">
+                <h4>
+                    <i class="bi bi-book"></i>
+                    Learnings & Realizations
+                </h4>
+
+                <p>
+                    Throughout this semester, I realized that there is still so much more for me to learn in programming and data analytics. We have already studied Python before, but I feel that I was not able to fully grasp some of the concepts at that time. Looking back, the lessons may have been too fast for me, or I may not have spent enough time practicing them. However, during this semester, I found it much easier to understand the topics that were discussed.
+                </p>
+
+                <p>
+                    One thing that helped me learn better was the way our assessments were conducted. In previous classes, most quizzes were identification-based, where I only needed to memorize the meaning of functions or concepts. In this class, we had more laboratory quizzes and hands-on activities. Because of this, I was encouraged to actually write, analyze, and understand the code instead of simply memorizing definitions. This experience helped me become more confident in applying what I learned.
+                </p>
+
+                <p>
+                    Among the topics discussed, I believe I was able to understand data types, lists, dictionaries, loops, conditional statements, data cleaning, and basic data analysis using Pandas. Working with datasets also helped me appreciate the importance of preparing and organizing data before performing any analysis or visualization.
+                </p>
+
+                <p>
+                    Despite my progress, I still find functions and Object-Oriented Programming (OOP) challenging at times. While I understand their basic purpose, there are still situations where I become confused when creating methods, passing parameters, or organizing code into classes. This made me realize that learning programming is a continuous process and that there is always room for improvement.
+                </p>
+
+                <p>
+                    Another area that I want to improve on is Flask development. I was introduced to Flask in a previous subject, but I was not able to fully understand how everything worked together. Unfortunately, there was not enough time this semester to explore Flask in greater depth. Because of this, I became even more interested in learning it on my own, especially since it is useful for developing web-based applications and dashboards
+                </p>
+
+                <p>
+                    Overall, this course helped me realize that understanding programming requires consistent practice, not just memorization. It also showed me that learning happens gradually through hands-on experience, problem solving, and continuous improvement. Although I still have areas that need development, I am more confident in my abilities than before, and I am motivated to continue learning and improving my skills in Python and data analytics.
+                </p>
+            </div>
+
+        </div>
+
+        <!-- Cariaga, Pamela Andrea -->
+        <div class="member-card">
+
+            <div class="member-header">
+                <div class="member-profile">
+                    <img src="{{ url_for('static', filename='Images/') }}" alt="Cariaga, Pamela Andrea" class="member-avatar">
+
+                    <div class="member-info">
+                        <h3>Cariaga, Pamela Andrea</h3>
+                    </div>
+                </div>
+
+                <span class="member-role">Member 1</span>
+            </div>
+
+            <div class="lesson-content">
+                <h4>
+                    <i class="bi bi-book"></i>
+                    Learnings & Realizations
+                </h4>
+
+                <p>
+                    Type here...
+                </p>
+
+            </div>
+
+        </div>
+
+        <!-- Dacasin, Christian  -->
+        <div class="member-card">
+
+            <div class="member-header">
+                <div class="member-profile">
+                    <img src="{{ url_for('static', filename='Images/') }}" alt="Dacasin, Christian" class="member-avatar">
+
+                    <div class="member-info">
+                        <h3>Dacasin, Christian</h3>
+                    </div>
+                </div>
+
+                <span class="member-role">Member 2</span>
+            </div>
+
+            <div class="lesson-content">
+                <h4>
+                    <i class="bi bi-book"></i>
+                    Learnings & Realizations
+                </h4>
+
+                <p>
+                    Looking back at the start of this semester, I initially thought my prior experience with basic Python would be enough to get me through. Last semester, my approach to programming was entirely definition-based I would just read the PowerPoint slides, follow the examples, and memorize what functions did. I didn't push myself to write clean code or think about how these concepts applied outside the classroom. But as this semester progressed, I had a major realization: programming isn't just about passing quizzes; it’s about building actual, functioning systems.
+                </p>
+
+                <p>
+                    The turning point for me was when our assessments shifted from simple identification to hands-on laboratory activities. Instead of just memorizing what a dictionary or a loop is, I had to actually use them to manipulate data. Learning how to clean and analyze datasets with Pandas made me realize that even a small error in data preparation can ruin the final results. I started to see how these tools are used to process real-world information like accurately calculating and tracking student BMI or managing daily attendance records. It made the code feel alive and purposeful.
+                </p>
+
+                <p>
+                    My perspective on my difficulties with data cleaning has also shifted as a result of that mental shift from theory to real implementation. Managing complicated datasets, dealing with missing information, and figuring out how to standardize conflicting formats continue to be difficult for me. But I now see that data preparation is a system-based method to guarantee correctness while constructing a larger project, not just a tiresome collection of rules to memorize. I'm beginning to see that effectively cleaning data involves ensuring that every input like precisely capturing student measurements or daily attendance is totally dependable, ensuring the appropriate operation of the entire system and averting mistakes later on.
+                </p>
+
+                <p>
+                    This insight has given me a sincere desire to develop my abilities outside of the curriculum. For instance, I'm eager to learn more about Python and improve my general comprehension of the language. Although we didn't have enough time this semester to thoroughly examine advanced Python concepts like effective data handling, appropriate error management, or writing genuinely clean and "Pythonic" code I now recognize their crucial importance in creating dependable systems. The next step to going beyond simple scripts and becoming a more proficient developer who can create smooth, reliable programs seems to be expanding my fundamental programming skills on my own.
+                </p>
+
+            </div>
+
+        </div>
+
+        <!-- Guyo, Priencethom  -->
+        <div class="member-card">
+
+            <div class="member-header">
+                <div class="member-profile">
+                    <img src="{{ url_for('static', filename='Images/M4_GUYO.png') }}" alt="Guyo, Priencethom" class="member-avatar">
+
+                    <div class="member-info">
+                        <h3>Guyo, Priencethom</h3>
+                    </div>
+                </div>
+
+                <span class="member-role">Member 3</span>
+            </div>
+
+            <div class="lesson-content">
+                <h4>
+                    <i class="bi bi-book"></i>
+                    Learnings & Realizations
+                </h4>
+
+                <p>
+                    In this class, I learned more about how Python can be used to solve problems and work with data. I learned how to organize and clean data, find useful information, create graphs, and build simple websites that can display data to users. These lessons helped me understand how programming and data can be used together to create useful systems and make better decisions.
+                </p>
+
+                <p>
+                    One thing I realized is that programming is not as easy as it looks. Even a small mistake in the code can cause a program to stop working. Because of this, I learned to be more patient and careful when checking my work. I also realized that practice is very important. The more I worked on coding activities and exercises, the more I understood the lessons and became comfortable with using Python.
+                </p>
+
+                <p>
+                    I am thankful to God for giving me strength during the times when I felt discouraged and started to lose confidence in learning programming. There were moments when I wanted to give up because some topics were difficult for me to understand. I know that programming is not my strongest skill, and there are times when I struggle more than others. However, I always try my best to fulfill my responsibilities as a student and continue learning despite the challenges. I also want to make my family and the people who support me proud through my hard work and determination.
+                </p>
+
+                <p>
+                    I still have a lot to learn, and I know my journey in programming is far from over. However, this class helped me build a stronger foundation and gave me more confidence in my abilities. It motivated me to keep learning, keep practicing, and continue improving myself as an IT student.
+                </p>
+
+
+            </div>
+
+        </div>
+
+        <!-- Leonen, Lance Lester   -->
+        <div class="member-card">
+
+            <div class="member-header">
+                <div class="member-profile">
+                    <img src="{{ url_for('static', filename='Images/M5_LEONEN.png') }}" alt="Leonen, Lance Lester" class="member-avatar">
+
+                    <div class="member-info">
+                        <h3>Leonen, Lance Lester</h3>
+                    </div>
+                </div>
+
+                <span class="member-role">Member 4</span>
+            </div>
+
+            <div class="lesson-content">
+                <h4>
+                    <i class="bi bi-book"></i>
+                    Learnings & Realizations
+                </h4>
+
+                <p>
+                    This semester has been quite a journey. The topics were not that hard to understand at first. Things like variables, conditions, loops, and functions felt manageable when taken one at a time. The case studies on data types, control flow, functions, and object-oriented programming, along with the assignments, helped a lot in seeing how these concepts actually work in real situations. But the moment everything gets combined, that is where it gets tricky. The quizzes and exams were honestly difficult, and there were times I did not pass, but I still walked away learning something from each one.
+                </p>
+
+                <p>
+                    Coming into this semester, I already had some background in Python from the first semester, so some of the topics felt familiar. But going deeper into it this second semester made me realize that knowing the basics is different from actually understanding how to use them properly. There is still a lot I do not fully know, and I will be honest about that. Not everything has clicked yet, but I am more aware now of what I need to work on.
+                </p>
+
+                <p>
+                    Working on the MindTrack project this semester felt very relevant. We were handling real data about social media habits and mental health patterns, which is exactly the kind of work Data Analytics involves. It showed me that building something meaningful takes more than just knowing the code. It takes planning, teamwork, and a lot of trial and error.
+                </p>
+
+                <p>
+                    Towards the end of the semester, some topics like Flask and web development were not fully covered in class due to time constraints. We had to figure those out on our own. And honestly, that is something I have to own. It was not a lack of teaching, it was a lack of effort on our part. We were lazy to learn, and the failing grades reflected that. But I think that is the lesson itself. Struggling through something you avoided is a reminder to do better next time, to be more proactive, and to not wait until it is too late.
+                </p>
+
+                <p>
+                    As the semester ends, I want to express my sincere appreciation and gratitude to our Instructor for everything this semester. The guidance and effort put into teaching us did not go unnoticed, and whatever we missed was on us, not on the teaching.
+                </p>
+
+                <p>
+                    Above all, I am grateful to God for getting through this semester. For the strength on the hard days, the clarity when things were confusing, and the grace to keep going even after falling short. All glory to Him.
+                </p>
+
+                <P>
+                    I may not have mastered everything yet, but I plan to keep studying Python even after this class is over. This semester gave me a foundation to build on, and I intend to take it seriously from here.
+                </P>
+
+            </div>
+
+        </div>
+        
+
+    </main>
+
+</body>
+
+
+
+
+
+
+
+
+</html>

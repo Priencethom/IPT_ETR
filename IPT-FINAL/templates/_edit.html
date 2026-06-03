@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Profile | MindTrack</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/_sidebar.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/_edit.css') }}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+</head>
+
+
+<body>
+
+    {% include "_sidebar.html" %}
+
+    <main class="account-main">
+
+        <section class="account-header">
+            <h1>Edit Your Profile</h1>
+            <p>Update your personal information below.</p>
+        </section>
+
+        <div class="account-container">
+            <div class="card edit-profile-card">
+                <form method="POST" enctype="multipart/form-data" class="edit-profile-form">
+
+                    <!-- Photo Section -->
+                    <div class="photo-upload-section">
+                        <span class="section-label">Change Photo</span>
+
+
+                        <div class="photo-preview-circle">
+                            {% if user['profile_photo'] %}
+                                <img src="{{ url_for('static', filename='uploads/' + user['profile_photo']) }}" alt="Profile Photo">
+                            {% else %}
+                                <i class="bi bi-camera-fill camera-icon"></i>
+                            {% endif %}
+                        </div>
+
+
+
+                        <input type="file" id="profile_photo" name="profile_photo" accept=".jpg,.jpeg,.png,.gif" hidden>
+                        <button type="button" class="btn choose-photo-btn" onclick="document.getElementById('profile_photo').click()">Choose Photo</button>
+                        <p class="file-requirements">JPG, PNG or GIF. Max size 2MB</p>
+                    </div>
+
+                    <!-- Form Inputs -->
+                    <div class="form-inputs-section">
+
+                        <div class="form-group">
+                            <label for="username">Username</label>
+                            <input type="text" id="username" name="username" value="{{ user['username'] }}" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="role">Role</label>
+                            <input type="text" id="role" name="role" value="{{ user['role'] }}" readonly>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" id="password" name="password" placeholder="Enter new password">
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="submit" class="btn save-btn">Save</button>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>

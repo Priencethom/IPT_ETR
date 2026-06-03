@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MindTrack Login</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/login_register.css') }}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+
+<body>
+    <div class="login-wrapper">
+        
+        <div class="brand-section">
+
+            <div class="logo-container">
+                <div class="logo-icon"></div> 
+                <span class="brand-name">MindTrack</span>
+            </div>
+            <p class="tagline">Tracking Social Media and Mental Health Patterns</p>
+
+            <div class="hero-text">
+                <h1>Understand today, <br>build a <span class="highlight">healthier tomorrow.</span></h1>
+                <p class="description">
+                    MindTrack helps you explore teen social media usage on platforms like TikTok and Instagram, sleep patterns, academic performance, and mental health indicators such as stress, anxiety, addiction, and depression through smart insights and meaningful tracking.
+                </p>
+            </div>
+
+            <div class="info-boxes">
+                <div class="info-box">
+                    <div class="info-icon">📊</div>
+                    <div class="info-content">
+                        <strong>Smart Analytics</strong>
+                        <p>Track usage & academics</p>
+                    </div>
+                </div>
+                <div class="info-box">
+                    <div class="info-icon">💙</div>
+                    <div class="info-content">
+                        <strong>Mental Wellness</strong>
+                        <p>Stress, anxiety & depression</p>
+                    </div>
+                </div>
+                <div class="info-box">
+                    <div class="info-icon">🛡️</div>
+                    <div class="info-content">
+                        <strong>Data Privacy</strong>
+                        <p>Data is secure</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="login-card-container">
+            <div class="login-card">
+                <h2>Welcome Back!</h2>
+                <p class="subtitle">Sign in to continue to <span class="brand-accent">MindTrack</span></p>
+
+                <form method="POST" action="{{ url_for('login') }}">
+                    <div class="input-group">
+                        <label for="username">Username</label>
+                        <div class="input-wrapper-inner">
+                            <span class="input-icon"><i class="bi bi-person"></i></span>
+                            <input type="text" id="username" name="username" placeholder="Enter your username" required minlength="3" maxlength="30">
+                        </div>
+                        <small class="field-hint">3–30 characters (letters, numbers, and underscores only)</small>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="password">Password</label>
+                        <div class="input-wrapper-inner">
+                            <span class="input-icon"><i class="bi bi-lock"></i></span>
+                            <input type="password" id="password" name="password" placeholder="Enter your password" required minlength="5" maxlength="50">
+                        </div>
+                        <small class="field-hint">5–50 characters, must include at least one letter and one number</small>
+                    </div>
+
+                    <button type="submit" class="btn-submit">
+                        <span>Log In</span>
+                    </button>
+                </form>
+
+                <div class="divider">account</div>
+
+                <p class="signup-prompt">name: admin / password: 123456</p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Flash Messages -->
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                    {% if category == 'error' %}
+                        Swal.fire({
+                            icon: 'error',
+                            title: 'Oops...',
+                            text: '{{ message }}',
+                            confirmButtonColor: '#00b4d8'
+                        });
+                    {% elif category == 'success' %}
+                        Swal.fire({
+                            icon: 'success',
+                            title: 'Success!',
+                            text: '{{ message }}',
+                            confirmButtonColor: '#00b4d8'
+                        });
+                    {% endif %}
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+    });
+    </script>
+
+
+</body>
+
+
+
+</html>

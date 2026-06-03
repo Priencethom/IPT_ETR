@@ -241,6 +241,46 @@
                 </div>
             </div>
 
+            <!-- kkkk -->
+            <!-- Summary Statistics Table -->
+            <div class="chart-card summary-stats-card" style="grid-column: 1 / -1;">
+                <div class="summary-title">
+                    <i class="bi bi-table"></i>
+                    <h3>Summary Statistics</h3>
+                </div>
+
+                {% if summary_stats %}
+                <div style="overflow-x: auto;">
+                    <table class="stats-table">
+                        <thead>
+                            <tr>
+                                <th>Metric</th>
+                                <th>Average</th>
+                                <th>Median</th>
+                                <th>Std Dev</th>
+                                <th>Min</th>
+                                <th>Max</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for col, stats in summary_stats.items() %}
+                            <tr>
+                                <td class="metric-name">{{ col | replace('_', ' ') | title }}</td>
+                                <td>{{ stats.average }}</td>
+                                <td>{{ stats.median }}</td>
+                                <td>{{ stats.std_dev }}</td>
+                                <td>{{ stats.min }}</td>
+                                <td>{{ stats.max }}</td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+                {% else %}
+                <p style="color: #6b7280; text-align: center; padding: 20px;">No data available for the selected filters.</p>
+                {% endif %}
+            </div>
+
         </section>
 
     </main>

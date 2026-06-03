@@ -213,6 +213,11 @@ def dashboard():
         boxplot_chart='Images/boxplot_chart.png',
         grouped_bar_chart='Images/grouped_bar_chart.png',
         pie_chart='Images/pie_chart.png',
+        scatter_plot2="Images/scatter_plot2.png",
+        histogram_plot2="Images/histogram_plot2.png",
+        boxplot_chart2="Images/boxplot_chart2.png",
+        grouped_bar_chart2="Images/grouped_bar_chart2.png",
+        pie_chart2="Images/pie_chart2.png",
         # Pass current filter values back so selects stay in sync
         selected_gender=gender_filter,
         selected_platform=platform_filter,
